@@ -1,1 +1,1 @@
-My solutions from adventofcode (https://adventofcode.com/2015)
+My solutions for adventofcode problems (https://adventofcode.com/2015)
