@@ -42,14 +42,6 @@ public static class twntyTwntyFive
 
                 actualPosition = StartDigit;
 
-
-               //StartDigit = StartDigit + convertedDigit;
-                //if (StartDigit > 99)
-                //{
-                //    actualPosition = StartDigit - 100;
-                //}
-                //else
-                //    actualPosition = StartDigit;
             }
             else
             {
@@ -69,15 +61,6 @@ public static class twntyTwntyFive
 
                 }
                 actualPosition = StartDigit;
-
-
-                //StartDigit = StartDigit - convertedDigit;
-                //if (StartDigit < 0)
-                //{
-                //    actualPosition = StartDigit + 100;
-                //}
-                //else
-                //    actualPosition = StartDigit;
 
             }
 
