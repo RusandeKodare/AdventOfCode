@@ -1,10 +1,6 @@
-﻿namespace AdventOfCode01;
+﻿using AdventOfCode01.Interfaces;
 
-public interface IUI
-{
-    public void Write(string output);
-    public string Read();
-}
+namespace AdventOfCode01.UI;
 
 public class UI : IUI
 {
