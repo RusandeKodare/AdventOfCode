@@ -4,12 +4,12 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        //twntyFifteen.Advent2015Day4Part1();
+        var ui = new UI();
+        var rotationApplier = new RotationApplier(ui);
+        var twntyTwntyFive = new TwntyTwntyFiveDay1Part1(rotationApplier);
 
-        twntyTwntyFive.Something();
+        var amountOfZeroes = twntyTwntyFive.CalcuateAmountOfZeroes().ToString();
 
-
-
-
+        ui.Write(amountOfZeroes);
     }
 }
