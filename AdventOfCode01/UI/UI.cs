@@ -4,7 +4,7 @@ namespace AdventOfCode01.UI;
 
 public class UI : IUI
 {
-    public string Read() =>
+    public string? Read() =>
         Console.ReadLine();
     
     public void Write(string output) =>

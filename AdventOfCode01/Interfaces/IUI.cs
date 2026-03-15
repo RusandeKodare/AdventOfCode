@@ -3,5 +3,5 @@
 public interface IUI
 {
     public void Write(string output);
-    public string Read();
+    public string? Read();
 }
