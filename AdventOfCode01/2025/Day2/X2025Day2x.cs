@@ -1,9 +1,14 @@
 ﻿namespace AdventOfCode01;
-public class X2025Day2x(IParser parser, string input)
+
+//Part 1
+//First attempt: 21898734247 (Success!)
+
+//Part 2
+//First attempt: 28915664389 (Success!)
+public class X2025Day2x(IParser parser, SumAccumulator sumAcculmulator, string input)
 {
     private List<string> splittedInputSingle = [];
     private List<long> invalidIds = [];
-    private long sumOfAllInvalidIds;
 
     public long ReturnSumOfInvalidIds()
     {
@@ -25,17 +30,10 @@ public class X2025Day2x(IParser parser, string input)
             _ = ProcessRangeForInvalidIds(startDigit, endDigit);
         }
 
-        return SumInvalidIds();
+        return sumAcculmulator.SumFromListOfInt(invalidIds);
     }
 
-    private long SumInvalidIds()
-    {
-        foreach (var invalidId in invalidIds)
-        {
-            sumOfAllInvalidIds = sumOfAllInvalidIds + invalidId;
-        }
-        return sumOfAllInvalidIds;
-    }
+
 
     private long ProcessRangeForInvalidIds(long startDigit, long endDigit)
     {

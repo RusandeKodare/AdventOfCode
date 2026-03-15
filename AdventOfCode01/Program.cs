@@ -6,59 +6,11 @@ internal class Program
     {
         var ui = new UI.UI();
 
-        //var input = "11-22,95-115,998-1012,1188511880-1188511890,222220-222224, 1698522-1698528,446443-446449,38593856-38593862,565653-565659, 824824821-824824827,2121212118-2121212124";
-
-        ////var input = "123123123";
-
-        //var splittedInputPairs = input.Split(",");
-        //var splittedInputSingle = new List<string>();
-
-        //foreach (var thing in splittedInputPairs)
-        //{
-        //    var splitted = thing.Split("-");
-        //    splittedInputSingle.AddRange(splitted);
-        //}
-
-        //var timesToTry = input.Length;
-
-        //int invalidNumbers = 0;
-        //var listOfInvalidNumbers = new List<string>();
-
-
-
-        //while (timesToTry > 1)
-        //{
-        //    List<string> listOfDividedNumbers = [];
-
-        //    if (input.Length % timesToTry == 0)
-        //    {
-        //        var divider = input.Length / timesToTry;
-
-        //        for (int i = 0; i < timesToTry; i++)
-        //        {
-        //            listOfDividedNumbers.Add(input.Substring(i * divider, divider));
-        //        }
-        //        for (int i = 0; i < listOfDividedNumbers.Count()-1; i++)
-        //        {
-        //            if (listOfDividedNumbers[i] != listOfDividedNumbers[i + 1])
-        //                break;
-        //        }
-        //        listOfInvalidNumbers.Add(listOfDividedNumbers[0]);
-        //    }
-
-        //    timesToTry--;
-        //}
-        //var sum = 0;
-        //foreach (var item in listOfInvalidNumbers)
-        //{
-        //    sum = sum + int.Parse(item);
-        //}
-        //ui.Write(sum.ToString());
-
         var stringToListParser = new StringToListParser();
+        var sumAccumulator = new SumAccumulator();
         var realInput = "655-1102,2949-4331,885300-1098691,1867-2844,20-43,4382100-4484893,781681037-781860439,647601-734894,2-16,180-238,195135887-195258082,47-64,4392-6414,6470-10044,345-600,5353503564-5353567532,124142-198665,1151882036-1151931750,6666551471-6666743820,207368-302426,5457772-5654349,72969293-73018196,71-109,46428150-46507525,15955-26536,65620-107801,1255-1813,427058-455196,333968-391876,482446-514820,45504-61820,36235767-36468253,23249929-23312800,5210718-5346163,648632326-648673051,116-173,752508-837824";
         var practiceInput = "11-22,95-115,998-1012,1188511880-1188511890,222220-222224, 1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124";
-        var x2025Day2x = new X2025Day2x(stringToListParser, realInput);
+        var x2025Day2x = new X2025Day2x(stringToListParser, sumAccumulator, realInput);
         var sumOfAllInvalidIds = x2025Day2x.ReturnSumOfInvalidIds();
 
         ui.Write(sumOfAllInvalidIds.ToString());
